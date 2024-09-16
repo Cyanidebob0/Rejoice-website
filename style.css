@@ -93,9 +93,33 @@ html, body {
 #page-2{
     height:100vh;
     width:100%;
-    background-color: #FAF8F3
+    background-color: #FAF8F3;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+#p2-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between ;
+    padding: 1.8vw 2.8vw;
+}
+
+#p2-header h3{
+    margin-top: 3vw;
+    font-size: 1.7vw;
+    font-weight: 100;
+}
+#page-2 hr{
+    width:90%;
+}
+
+#page-2 p{
+    width:90%;
+    font-size: 4vw;
+    margin-top: 2vw;
+}
 
 
 
