@@ -34,3 +34,16 @@ function mouseMove() {
 }
 mouseMove();
 
+gsap.from(".moveUp",{
+    y:120,
+    stagger:0.2,
+    duration:1,
+    delay:2,
+    scrollTrigger:{
+        trigger:"#page-2",
+        scroller:"body",
+        start:"top 50%",
+        end:"top 100%",
+        scrub:4
+    }
+})
