@@ -39,6 +39,7 @@ function mouseMove() {
     let cursor = document.querySelector("#cursor");
 
     document.querySelector("#p1-content").addEventListener("mousemove", (e) => {
+        console.log(e.y);
         gsap.to(cursor, {
             x: e.x,
             y: e.y,
@@ -71,8 +72,9 @@ function mouseMove() {
 }
 mouseMove();
 
-function page2animation(){
-    gsap.from(".moveUp",{
+function ScrollAnimations(){
+
+    gsap.from(".moveUp1",{
         y:120,
         stagger:0.1,
         duration:0.5,
@@ -85,5 +87,21 @@ function page2animation(){
             scrub:3
         }
     })
+
+    gsap.from(".moveUp2",{
+        y:120,
+        stagger:0.1,
+        duration:0.5,
+        delay:1,
+        scrollTrigger:{
+            trigger:"#page-3",
+            scroller:"#main",
+            start:"top 70%",
+            end:"top 67%",
+            scrub:3
+        }
+    })
+
 }
-page2animation();
+ScrollAnimations();
+
