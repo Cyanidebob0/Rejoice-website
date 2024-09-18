@@ -116,15 +116,18 @@ body {
     font-weight: 100;
 }
 
-#page-2 hr , #page-2 hr{
+#page-2 hr,
+#page-2 hr {
     width: 90%;
 }
 
-.cover1 , .cover3{
+.cover1,
+.cover3 {
     overflow: hidden;
 }
 
-.cover1 h1 , .cover3 h1{
+.cover1 h1,
+.cover3 h1 {
     font-size: 4.2vw;
     font-weight: 100;
     letter-spacing: -0.1vw;
@@ -160,11 +163,12 @@ body {
     text-align: center;
 }
 
-.cover2{
+.cover2 {
     overflow: hidden;
 }
 
-.cover2 h1 , .cover3 h1{
+.cover2 h1,
+.cover3 h1 {
     font-size: 4.2vw;
     font-weight: 100;
 
@@ -231,18 +235,85 @@ body {
 
 }
 
-#page-4{
+#page-4 {
     height: 100vh;
-    width:100%;
+    width: 100%;
     position: relative;
     background-color: #faf8f3;
     padding: 1.8vw 2.8vw;
     text-align: center;
 }
 
-#page-4 hr{
+#page-4 hr {
     margin-top: 10vw;
     margin-bottom: 2vw;
-    
+
 }
 
+#page-5 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #faf8f3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-5 svg {
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+}
+
+#page-5 video {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+
+#p5-first {
+    height: 12vw;
+    width: 14vw;
+    position: absolute;
+    color: white;
+    font-size: 2vw;
+    display: flex;
+    gap: 0.5vw;
+}
+
+#p5-first #num {
+    height: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: hidden;
+}
+
+#p5-first #num span {
+    font-weight: 100;
+    font-size: 4vw;
+
+}
+
+#p5-first h1 {
+    font-weight: 100;
+    font-size: 4vw;
+}
+
+#page-5 h5 {
+    position: absolute;
+    font-weight: 100;
+    font-size: 2vw;
+    color: white;
+
+
+}
+
+#inner-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vw;
+    margin-left: 1.5vw;
+}

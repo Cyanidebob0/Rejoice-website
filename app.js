@@ -1,36 +1,36 @@
-function loco(){
+function loco() {
     gsap.registerPlugin(ScrollTrigger);
 
-// Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+    // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true
-});
-// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-locoScroll.on("scroll", ScrollTrigger.update);
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector("#main"),
+        smooth: true
+    });
+    // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+    locoScroll.on("scroll", ScrollTrigger.update);
 
-// tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
-ScrollTrigger.scrollerProxy("#main", {
-  scrollTop(value) {
-    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-  getBoundingClientRect() {
-    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-  },
-  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-  pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
-});
-
-
+    // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
+    ScrollTrigger.scrollerProxy("#main", {
+        scrollTop(value) {
+            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+        }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+        getBoundingClientRect() {
+            return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+        },
+        // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+        pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+    });
 
 
 
-// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-ScrollTrigger.refresh();
+
+    // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+    // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+    ScrollTrigger.refresh();
 }
 loco();
 
@@ -39,7 +39,6 @@ function mouseMove() {
     let cursor = document.querySelector("#cursor");
 
     document.querySelector("#p1-content").addEventListener("mousemove", (e) => {
-        console.log(e.y);
         gsap.to(cursor, {
             x: e.x,
             y: e.y,
@@ -58,6 +57,8 @@ function mouseMove() {
         })
     })
 
+
+
     document.querySelector("#p1-content").addEventListener("mouseleave", (e) => {
         gsap.to(cursor, {
             x: e.x,
@@ -72,50 +73,74 @@ function mouseMove() {
 }
 mouseMove();
 
-function ScrollAnimations(){
+function ScrollAnimations() {
 
-    gsap.from(".moveUp1",{
-        y:120,
-        stagger:0.1,
-        duration:0.5,
-        delay:1,
-        scrollTrigger:{
-            trigger:"#page-2",
-            scroller:"#main",
-            start:"top 50%",
-            end:"top 47%",
-            scrub:3
+    gsap.from(".moveUp1", {
+        y: 120,
+        stagger: 0.1,
+        duration: 0.5,
+        delay: 1,
+        scrollTrigger: {
+            trigger: "#page-2",
+            scroller: "#main",
+            start: "top 50%",
+            end: "top 47%",
+            scrub: 3
         }
     })
 
-    gsap.from(".moveUp2",{
-        y:120,
-        stagger:0.1,
-        duration:0.5,
-        delay:1,
-        scrollTrigger:{
-            trigger:"#page-3",
-            scroller:"#main",
-            start:"top 70%",
-            end:"top 67%",
-            scrub:3
+    gsap.from(".moveUp2", {
+        y: 120,
+        stagger: 0.1,
+        duration: 0.5,
+        delay: 1,
+        scrollTrigger: {
+            trigger: "#page-3",
+            scroller: "#main",
+            start: "top 70%",
+            end: "top 67%",
+            scrub: 3
         }
     })
 
-    gsap.from(".moveUp3",{
-        y:120,
-        stagger:0.1,
-        duration:0.5,
-        delay:1,
-        scrollTrigger:{
-            trigger:"#page-4",
-            scroller:"#main",
-            start:"top 60%",
-            end:"top 57%",
-            scrub:3
+    gsap.from(".moveUp3", {
+        y: 120,
+        stagger: 0.1,
+        duration: 0.5,
+        delay: 1,
+        scrollTrigger: {
+            trigger: "#page-4",
+            scroller: "#main",
+            start: "top 50%",
+            end: "top 47%",
+            scrub: 3
         }
     })
 
 }
 ScrollAnimations();
+
+function page4Animation() {
+    gsap.to(".dot circle", {
+        duration: 2, // Duration of the animation
+        ease: "power1.inOut", // Easing function for smooth transition
+        motionPath: {
+            path: "#verticalPath", // Path element to follow
+            align: "#verticalPath", // Align to the path
+            alignOrigin: [0.5, 0.5] // Center of the path
+        },
+        scrollTrigger: {
+            trigger: "#page-5",
+            scroller: "#main",
+            start: "top 60%",
+            end: "top 57%",
+            scrub: 5,
+        }
+    });
+
+
+
+}
+page4Animation();
+
 
