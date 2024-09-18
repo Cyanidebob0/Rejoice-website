@@ -85,12 +85,20 @@ body {
     font-size: 27vw;
     font-weight: 400;
     line-height: 30vw;
+    
 
+}
 
+#main-cover{
+   margin-left: 2%;
+    height: 58vh ;
+    width:95%;
+    overflow: hidden;
 }
 
 #p1-content h1 span {
     font-family: "mainFont";
+     display: inline-block; 
 }
 
 #page-2 {
@@ -409,7 +417,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     color: #faf8f3;
 }
 #loader h3{

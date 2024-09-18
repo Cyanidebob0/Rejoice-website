@@ -34,7 +34,6 @@ function loco() {
 }
 loco();
 
-
 function mouseMove() {
     let cursor = document.querySelector("#cursor");
 
@@ -167,39 +166,63 @@ function swiper() {
             el: ".swiper-pagination",
             clickable: true,
         },
-         autoplay: {
-             delay: 1000,
-             disableOnInteraction:true,
-         },
-         speed: 35000,
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: true,
+        },
+        speed: 35000,
     });
 }
 swiper();
 
+function cover() {
+    let tl = gsap.timeline()
 
-let tl=gsap.timeline()
+    tl.from("#loader h3", {
+        x: 60,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.1,
+    })
 
-tl.from("#loader h3",{
-    x:60,
-    opacity:0,
-    duration:1,
-    stagger:0.1,
-})
+    tl.to("#loader h3", {
+        opacity: 0,
+        x: -10,
+        duration: 1,
+        stagger: 0.1,
+    })
 
-tl.to("#loader h3",{
-    opacity:0,
-    x:-10,
-    duration:1,
-    stagger:0.1,
-})
+    tl.to("#loader", {
+        duration: 0.5,
+        opacity: 0
+    })
 
-tl.to("#loader",{
-    duration:0.5,
-    opacity:0
-})
+    tl.to("#loader", {
+        duration: 0.2,
+        display: "none",
+    })
 
-tl.to("#loader",{
-    duration:0.2,
-    display:"none",
-})
+
+    tl.from("#p1-content h1 span", {
+        duration: 0.5,
+        y: 500,
+        stagger: 0.1,
+    })
+
+    tl.from("#heading #right", {
+        opacity: 0,
+        duration: 2,
+    }, "<")
+
+    tl.from("#heading #left", {
+        x: 60,
+        opacity: 0,
+        duration: 2,
+        stagger: 0.1,
+    }, "<")
+}
+cover();
+
+
+
 
