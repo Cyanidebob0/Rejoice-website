@@ -206,7 +206,7 @@ function cover() {
     tl.from("#p1-content h1 span", {
         duration: 0.5,
         y: 500,
-        stagger: 0.1,
+        stagger: 0.05,
     })
 
     tl.from("#heading #right", {
@@ -218,7 +218,6 @@ function cover() {
         x: 60,
         opacity: 0,
         duration: 2,
-        stagger: 0.1,
     }, "<")
 }
 cover();
