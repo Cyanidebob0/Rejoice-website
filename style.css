@@ -2,27 +2,30 @@
     font-family: "NB";
     src: url(./NBInternationalProBoo.ttf);
 }
+
 @font-face {
     font-family: "mainFont";
     src: url(./Rejouice-Headline.ttf);
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "NB";
-     /* overflow-x: hidden; */
+    /* overflow-x: hidden; */
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
-    
+
 }
 
-#cursor{
-    height:7vw;
-    width:7vw;
+#cursor {
+    height: 7vw;
+    width: 7vw;
     background-color: rgba(0, 0, 0, 0.564);
     border-radius: 50%;
     display: flex;
@@ -30,44 +33,45 @@ html, body {
     align-items: center;
     color: white;
     font-weight: 500;
-    position :fixed;
+    position: fixed;
     z-index: 1;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 
 
-#page-1{
+#page-1 {
     width: 100%;
     height: 100vh;
     position: relative;
-   
+
 }
 
 
 
-#page-1 video{
+#page-1 video {
     width: 100%;
     height: 100%;
     position: absolute;
     object-fit: cover;
-    
+
 }
 
- #p1-content{
+#p1-content {
     width: 100%;
     height: 100%;
     position: relative;
     z-index: 2;
-    color:#FFFCF1;
+    color: #FFFCF1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:9vw;
-    z-index:2;
-    
+    gap: 9vw;
+    z-index: 2;
+
 }
-#heading{
+
+#heading {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -76,64 +80,65 @@ html, body {
 }
 
 
-
-#p1-content h1{
-    font-family:"mainFont" ;
-    font-size: 27vw;    
+#p1-content h1 {
+    font-family: "mainFont";
+    font-size: 27vw;
     font-weight: 400;
     line-height: 30vw;
-    
-    
-}  
 
-#p1-content h1 span{
-    font-family:"mainFont";
+
 }
 
-#page-2{
-    height:100vh;
-    width:100%;
+#p1-content h1 span {
+    font-family: "mainFont";
+}
+
+#page-2 {
+    height: 100vh;
+    width: 100%;
     position: relative;
     background-color: #faf8f3;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#p2-header{
+#p2-header {
     width: 100%;
     display: flex;
-    justify-content: space-between ;
+    justify-content: space-between;
     padding: 1.8vw 2.8vw;
 }
 
-#p2-header h3{
+#p2-header h3 {
     margin-top: 3vw;
     font-size: 1.7vw;
     font-weight: 100;
 }
-#page-2 hr{
-    width:90%;
+
+#page-2 hr , #page-2 hr{
+    width: 90%;
 }
 
-.cover1{
+.cover1 , .cover3{
     overflow: hidden;
 }
 
-.cover1 h1{
+.cover1 h1 , .cover3 h1{
     font-size: 4.2vw;
     font-weight: 100;
-   
+    letter-spacing: -0.1vw;
+
 }
 
-#page-3{
-    min-height:100vh;
-    width:100%;
+#page-3 {
+    min-height: 100vh;
+    width: 100%;
     position: relative;
     background-color: #faf8f3;
 }
 
-#pg3head h4{
+#pg3head h4 {
     text-align: center;
     font-size: 1.2vw;
     font-weight: 200;
@@ -141,7 +146,7 @@ html, body {
 
 }
 
-#pg3head h4 span{
+#pg3head h4 span {
     background-color: black;
     color: #faf8f3;
     padding: 5px 11px;
@@ -151,7 +156,7 @@ html, body {
 
 
 
-#pg3head .cover2 .moveUp2{
+#pg3head .cover2 {
     text-align: center;
 }
 
@@ -159,49 +164,50 @@ html, body {
     overflow: hidden;
 }
 
-.cover2 h1{
+.cover2 h1 , .cover3 h1{
     font-size: 4.2vw;
     font-weight: 100;
-   
+
 }
 
-#contenthead{
+#contenthead {
     width: 100%;
-    padding:2vw;
+    padding: 2vw;
     margin-top: 9vw;
     display: flex;
     justify-content: space-between;
 
 }
-#contenthead h2{
+
+#contenthead h2 {
     padding: 0 0.4vw;
     font-size: 1.8vw;
     font-weight: 100;
 }
 
-.p3Content{
-    margin:0 2vw;
-    width:95%;
-    height:40vw;
+.p3Content {
+    margin: 0 2vw;
+    width: 95%;
+    height: 40vw;
     display: flex;
     justify-content: space-between;
 }
 
-.p3Content #inner{
-    height :97%;
-    width : 32.5%;
+.p3Content #inner {
+    height: 97%;
+    width: 32.5%;
     position: relative;
-    
+
 }
 
-.p3Content #inner video{
+.p3Content #inner video {
     height: 100%;
     width: 100%;
     object-fit: cover;
     cursor: pointer;
 }
 
-.p3Content #inner img{
+.p3Content #inner img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -211,23 +217,32 @@ html, body {
 }
 
 
-.p3Content #inner:hover > :nth-child(2) {
+.p3Content #inner:hover> :nth-child(2) {
     opacity: 0;
 }
 
-.p3Content #inner > :nth-child(1){
+.p3Content #inner> :nth-child(1) {
     object-fit: contain;
     height: 2.7vw;
     width: 100%;
     position: absolute;
     z-index: 3;
     top: 30vw;
-    
+
 }
 
+#page-4{
+    height: 100vh;
+    width:100%;
+    position: relative;
+    background-color: #faf8f3;
+    padding: 1.8vw 2.8vw;
+    text-align: center;
+}
 
-
-
-
-
+#page-4 hr{
+    margin-top: 10vw;
+    margin-bottom: 2vw;
+    
+}
 

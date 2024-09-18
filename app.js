@@ -102,6 +102,20 @@ function ScrollAnimations(){
         }
     })
 
+    gsap.from(".moveUp3",{
+        y:120,
+        stagger:0.1,
+        duration:0.5,
+        delay:1,
+        scrollTrigger:{
+            trigger:"#page-4",
+            scroller:"#main",
+            start:"top 60%",
+            end:"top 57%",
+            scrub:3
+        }
+    })
+
 }
 ScrollAnimations();
 
