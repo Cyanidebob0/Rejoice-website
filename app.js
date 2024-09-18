@@ -117,17 +117,31 @@ function ScrollAnimations() {
         }
     })
 
+    gsap.from(".moveUp4", {
+        y: 120,
+        stagger: 0.1,
+        duration: 0.5,
+        delay: 1,
+        scrollTrigger: {
+            trigger: "#page-6",
+            scroller: "#main",
+            start: "top 50%",
+            end: "top 47%",
+            scrub: 3
+        }
+    })
+
 }
 ScrollAnimations();
 
 function page4Animation() {
     gsap.to(".dot circle", {
-        duration: 2, // Duration of the animation
-        ease: "power1.inOut", // Easing function for smooth transition
+        duration: 2, 
+        ease: "power1.inOut", 
         motionPath: {
-            path: "#verticalPath", // Path element to follow
-            align: "#verticalPath", // Align to the path
-            alignOrigin: [0.5, 0.5] // Center of the path
+            path: "#verticalPath", 
+            align: "#verticalPath", 
+            alignOrigin: [0.5, 0.5] 
         },
         scrollTrigger: {
             trigger: "#page-5",

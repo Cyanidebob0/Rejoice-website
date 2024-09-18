@@ -122,12 +122,14 @@ body {
 }
 
 .cover1,
-.cover3 {
+.cover3,
+.cover4 {
     overflow: hidden;
 }
 
 .cover1 h1,
-.cover3 h1 {
+.cover3 h1,
+.cover4 h1 {
     font-size: 4.2vw;
     font-weight: 100;
     letter-spacing: -0.1vw;
@@ -167,8 +169,7 @@ body {
     overflow: hidden;
 }
 
-.cover2 h1,
-.cover3 h1 {
+.cover2 h1 {
     font-size: 4.2vw;
     font-weight: 100;
 
@@ -235,8 +236,8 @@ body {
 
 }
 
-#page-4 {
-    height: 100vh;
+#page-4,#page-6{
+    min-height: 100vh;
     width: 100%;
     position: relative;
     background-color: #faf8f3;
@@ -316,4 +317,19 @@ body {
     align-items: center;
     margin-top: 4vw;
     margin-left: 1.5vw;
+}
+
+#p6header{
+    width: 100%;
+    padding: 2vw;
+    margin-top: 9vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#p6header h1{
+    padding: 0 0.4vw;
+    font-size: 1.8vw;
+    font-weight: 100;
 }
