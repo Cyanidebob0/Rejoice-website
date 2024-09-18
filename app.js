@@ -194,7 +194,7 @@ tl.to("#loader h3",{
 })
 
 tl.to("#loader",{
-    duration:0.4,
+    duration:0.5,
     opacity:0
 })
 
