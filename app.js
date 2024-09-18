@@ -177,3 +177,29 @@ function swiper() {
 swiper();
 
 
+let tl=gsap.timeline()
+
+tl.from("#loader h3",{
+    x:60,
+    opacity:0,
+    duration:1,
+    stagger:0.1,
+})
+
+tl.to("#loader h3",{
+    opacity:0,
+    x:-10,
+    duration:1,
+    stagger:0.1,
+})
+
+tl.to("#loader",{
+    duration:0.4,
+    opacity:0
+})
+
+tl.to("#loader",{
+    duration:0.2,
+    display:"none",
+})
+
