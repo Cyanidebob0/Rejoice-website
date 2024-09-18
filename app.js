@@ -136,12 +136,13 @@ ScrollAnimations();
 
 function page4Animation() {
     gsap.to(".dot circle", {
-        duration: 2, 
-        ease: "power1.inOut", 
+        duration: 4,
+        delay: 0.5,
+        ease: "power1.inOut",
         motionPath: {
-            path: "#verticalPath", 
-            align: "#verticalPath", 
-            alignOrigin: [0.5, 0.5] 
+            path: "#verticalPath",
+            align: "#verticalPath",
+            alignOrigin: [0.5, 0.5]
         },
         scrollTrigger: {
             trigger: "#page-5",
@@ -156,5 +157,23 @@ function page4Animation() {
 
 }
 page4Animation();
+
+function swiper() {
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+         autoplay: {
+             delay: 1000,
+             disableOnInteraction:true,
+         },
+         speed: 35000,
+    });
+}
+swiper();
 
 

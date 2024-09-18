@@ -236,7 +236,8 @@ body {
 
 }
 
-#page-4,#page-6{
+#page-4,
+#page-6 {
     min-height: 100vh;
     width: 100%;
     position: relative;
@@ -319,7 +320,7 @@ body {
     margin-left: 1.5vw;
 }
 
-#p6header{
+#p6header {
     width: 100%;
     padding: 2vw;
     margin-top: 9vw;
@@ -328,8 +329,72 @@ body {
 
 }
 
-#p6header h1{
+#p6header h1 {
     padding: 0 0.4vw;
     font-size: 1.8vw;
     font-weight: 100;
+}
+
+#page-7 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #faf8f3;
+    position: relative;
+}
+
+#p7head {
+    width: 100%;
+    display: flex;
+    gap: 44vw;
+    align-items: baseline;
+
+
+}
+
+#p7head #left {
+    margin-left: 5%;
+    font-family: "mainFont";
+    font-size: 8vw;
+    font-weight: 200;
+}
+
+
+#page-7 hr {
+    width: 90%;
+    margin-left: 5%;
+    height: 2px;
+    background-color: black;
+
+}
+
+#swiperdiv {
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    margin-top: -1.8vw;
+
+}
+
+.swiper {
+    width: 130%;
+    height: 25vw;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 24%;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
 }
