@@ -35,8 +35,26 @@ body {
     font-weight: 500;
     position: fixed;
     z-index: 1;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    
 }
+
+@media (max-width: 768px) {
+    #cursor {
+        height: 12vw; 
+        width: 12vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #cursor {
+        height: 15vw; 
+        width: 15vw;
+    }
+}
+
 
 
 
@@ -446,7 +464,7 @@ body {
 }
 
 #page-8{
-    height:17vw;
+    min-height:27vw;
     width:100%;
     position: relative;
     color: #faf8f3;
@@ -498,3 +516,24 @@ body {
 
     
 }
+
+#main-cover-bot{
+    margin-left: 2%;
+    height: 58vh ;
+    width:95%;
+    overflow: hidden;
+}
+
+#main-cover-bot h1{
+    font-family: "mainFont";
+    font-size: 27vw;
+    font-weight: 400;
+    line-height: 30vw;  
+}
+
+#main-cover-bot h1 span{
+    font-family: "mainFont";
+     display: inline-block; 
+}
+
+
