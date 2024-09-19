@@ -13,7 +13,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "NB";
-    /* overflow-x: hidden; */
+
+}
+
+*::selection {
+    background-color: black;
+    color: #faf8f3;
 }
 
 html,
@@ -38,19 +43,19 @@ body {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    
+
 }
 
 @media (max-width: 768px) {
     #cursor {
-        height: 12vw; 
+        height: 12vw;
         width: 12vw;
     }
 }
 
 @media (max-width: 480px) {
     #cursor {
-        height: 15vw; 
+        height: 15vw;
         width: 15vw;
     }
 }
@@ -103,20 +108,20 @@ body {
     font-size: 27vw;
     font-weight: 400;
     line-height: 30vw;
-    
+
 
 }
 
-#main-cover{
-   margin-left: 2%;
-    height: 58vh ;
-    width:95%;
+#main-cover {
+    margin-left: 2%;
+    height: 58vh;
+    width: 95%;
     overflow: hidden;
 }
 
 #p1-content h1 span {
     font-family: "mainFont";
-     display: inline-block; 
+    display: inline-block;
 }
 
 #page-2 {
@@ -214,6 +219,8 @@ body {
     padding: 0 0.4vw;
     font-size: 1.8vw;
     font-weight: 100;
+    cursor: pointer;
+
 }
 
 .p3Content {
@@ -393,24 +400,27 @@ body {
 
 }
 
-#p7Foot{
+#p7Foot {
     width: 100%;
     display: flex;
-    padding: 10vw 0; 
+    padding: 10vw 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
 }
-#p7Foot h4{
+
+#p7Foot h4 {
     font-size: 1.3vw;
     font-weight: 100;
 }
 
-#p7Foot h1{
+#p7Foot h1 {
     font-size: 4.2vw;
     font-weight: 100;
-    text-decoration:  underline 2px;
+    text-decoration: underline 2px;
+    cursor: pointer;
+
 }
 
 #swiperdiv {
@@ -418,6 +428,8 @@ body {
     width: 100%;
     position: relative;
     margin-top: -1.8vw;
+    cursor: pointer;
+
 
 }
 
@@ -445,7 +457,7 @@ body {
     margin-right: auto;
 }
 
-#loader{
+#loader {
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -458,20 +470,21 @@ body {
     gap: 10px;
     color: #faf8f3;
 }
-#loader h3{
+
+#loader h3 {
     font-weight: 100;
     font-size: 2vw;
 }
 
-#page-8{
-    min-height:27vw;
-    width:100%;
+#page-8 {
+    min-height: 27vw;
+    width: 100%;
     position: relative;
     color: #faf8f3;
     background-color: black;
 }
 
-#p8head{
+#p8head {
     width: 100%;
     padding: 2vw 2vw;
     display: flex;
@@ -479,12 +492,13 @@ body {
     align-items: center;
 }
 
-#left h1{
+#left h1 {
     font-size: 1.8vw;
     font-weight: 100;
+
 }
 
-#left button{
+#left button {
     font-size: 1.2vw;
     padding: 15px 35px;
     border-radius: 100px;
@@ -492,48 +506,60 @@ body {
     color: #faf8f3;
     border: 1px white solid;
     margin-top: 2vw;
-    transition: all ease linear 0.5s;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
 }
 
-#right{
+#right {
     display: flex;
     justify-content: space-evenly;
 }
 
-#right h5{
+#right h5 {
     font-size: 1.2vw;
     font-weight: 100;
     line-height: 2;
+    transition: all 0.5s ease;
 }
 
-#a, #b{
+#a,
+#b {
     margin: 0 2vw;
 }
 
-#left button:hover{
+#a h5,
+#b h5 {
+    cursor: pointer;
+
+}
+
+#left button:hover {
     background-color: #faf8f3;
     color: black;
 
-    
+
 }
 
-#main-cover-bot{
+#right h5:hover {
+    color: #878683;
+}
+
+#main-cover-bot {
     margin-left: 2%;
-    height: 58vh ;
-    width:95%;
+    height: 58vh;
+    width: 95%;
     overflow: hidden;
 }
 
-#main-cover-bot h1{
+#main-cover-bot h1 {
     font-family: "mainFont";
     font-size: 27vw;
     font-weight: 400;
-    line-height: 30vw;  
+    line-height: 30vw;
 }
 
-#main-cover-bot h1 span{
+#main-cover-bot h1 span {
     font-family: "mainFont";
-     display: inline-block; 
+    display: inline-block;
 }
-
-

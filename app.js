@@ -131,17 +131,17 @@ function ScrollAnimations() {
     })
 
     gsap.from("#p8head #left, #p8head  #right", {
-        y: 130, 
-        opacity: 0, 
-        duration :4,
-        stagger:0.1,
+        y: 130,
+        opacity: 0,
+        duration: 4,
+        stagger: 0.1,
         scrollTrigger: {
-            trigger: "#page-8", 
-            scroller: "#main", 
-            start: "top 90%", 
-            end: "top 10%", 
-            scrub: 4,
-           
+            trigger: "#page-8",
+            scroller: "#main",
+            start: "top 90%",
+            end: "top 10%",
+            scrub: 6,
+
         }
     });
 
@@ -149,15 +149,15 @@ function ScrollAnimations() {
         duration: 1,
         y: 500,
         stagger: 0.1,
-        scrollTrigger:{
-            trigger:"#page-8",
-            scroller:"#main",
-            start:"top 50%",
-            end:"top 49%",
-            scrub:3,
+        scrollTrigger: {
+            trigger: "#page-8",
+            scroller: "#main",
+            start: "top 50%",
+            end: "top 49%",
+            scrub: 3,
         }
     })
-    
+
 
 }
 ScrollAnimations();
